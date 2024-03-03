@@ -6,14 +6,11 @@ const getComputerChoice = function (choices) {
     return randomChoice;
 }
 
-const getPlayerChoice = function (choices) {
-    let rng = Math.floor(Math.random() * 3);
-    let randomChoice = choices[rng];
-    return randomChoice;
-}
+const getPlayerChoice = prompt();
+
 
 const computerChoice = getComputerChoice(gameChoices);
-const playerChoice = getPlayerChoice(gameChoices);
+
 
 const playRound = function (playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
@@ -35,4 +32,14 @@ const playRound = function (playerChoice, computerChoice) {
     }
 }
 
-playRound(playerChoice, computerChoice);
+const playGame = function(){
+    playRound(getPlayerChoice, computerChoice);
+    playRound(getPlayerChoice, computerChoice);
+    playRound(getPlayerChoice, computerChoice);
+    playRound(getPlayerChoice, computerChoice);
+    playRound(getPlayerChoice, computerChoice);
+    
+}
+
+
+playGame();
